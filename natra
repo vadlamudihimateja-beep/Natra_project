@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Header portion of the page-->
+    <header class="top-header">
+        <div class="banner">
+            <!-- Logo-->
+            <div class="logo">
+                N
+            </div>
+            <div>
+                <h1> NETRA </h1>
+                <p>ROBOT MiSSION CONTROL</p>
+            </div>
+        </div>
+
+        <!-- Navigation bar-->
+        <nav class="navbar">
+            <a href="#">Dashboard</a>
+            <a href="#">Telemetry</a>
+            <a href="#">Fleet</a>
+            <a href="#">Alerts</a>
+            <a href="https://google.com" >Google</a>
+        </nav>
+
+        <!-- System time-->
+        <div class="system-time">
+            <p>SYSTEM ONLINE: <span>--:--:-- AM</span></p>
+        </div>
+
+        <div class="Dispatch-button">
+            <button>+DISPATCH MISSION</button>
+        </div>
+    </header>
+    
+</body>
+</html>

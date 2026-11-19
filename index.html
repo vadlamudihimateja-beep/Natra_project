@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#101b2c">
+    <title>NETRA | Robot Mission Control</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="top-header">
+        <div class="banner">
+            <span class="logo" aria-hidden="true">N</span>
+            <div>
+                <h1>NETRA</h1>
+                <p>ROBOT MISSION CONTROL</p>
+            </div>
+        </div>
+
+        <nav class="navbar" aria-label="Main navigation">
+            <a href="#">Dashboard</a>
+            <a href="#">Telemetry</a>
+            <a href="#">Fleet</a>
+            <a href="#">Alerts</a>
+        </nav>
+
+        <div class="system-time" role="status">
+            <p>SYSTEM ONLINE: <span id="local-time"></span></p>
+        </div>
+
+        <div class="dispatch-button">
+            <button type="button">+ DISPATCH MISSION</button>
+        </div>
+    </header>
+    <script>
+        const localTime = document.getElementById("local-time");
+        const localTimeFormatter = new Intl.DateTimeFormat(undefined, {
+            hour: "2-digit",
+            minute: "2-digit",
+            second: "2-digit",
+            hour12: true
+        });
+
+        function updateLocalTime() {
+            localTime.textContent = localTimeFormatter.format(new Date());
+        }
+
+        updateLocalTime();
+        setInterval(updateLocalTime, 1000);
+    </script>
+</body>
+</html>
