@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Responsive Web Design</title>
+    <!-- Required for proper mobile responsiveness -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        /* General Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background-color: lightgray;
+        }
+        /* Responsive Container */
+        .container {
+            width: 90%;
+            min-width: 280px;
+            max-width: 1100px;
+            margin: auto;
+            padding: 15px;
+            box-sizing: border-box;
+            background-color: white;
+        }
+        /* Responsive Heading */
+        h1 {
+            font-size: clamp(24px, 4vw, 42px);
+            text-align: center;
+            color: navy;
+        }
+        /* Navigation */
+        nav {
+            background-color: navy;
+            padding: 15px;
+            text-align: center;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 10px;
+        }
+        /* Mobile-First Layout */
+        .content {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 15px;
+        }
+        .box {
+            background-color: lightblue;
+            padding: 20px;
+            text-align: center;
+        }
+        /* Responsive Units */
+        .unit-box {
+            background-color: lightgreen;
+            width: 80%;
+            padding: 2vw;
+            margin: 20px auto;
+            font-size: 1.2rem;
+            box-sizing: border-box;
+        }
+text-indent        /* Fluid Sizing */
+        .fluid-box {
+            width: min(90%, 800px);
+            padding: max(10px, 2vw);
+            margin: 20px auto;
+            background-color: lightpink;
+            box-sizing: border-box;
+        }
+        /* Tablet: 600px and above */
+        @media (min-width: 600px) {
+            .content {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            nav a {
+                margin: 20px;
+            }
+        }
+        /* Desktop: 900px and above */
+        @media (min-width: 900px) {
+
+            .content {
+                grid-template-columns: 1fr 1fr 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Responsive Web Design</h1>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Courses</a>
+        </nav>
+        <h2>Responsive Grid Layout</h2>
+        <div class="content">
+            <div class="box">
+                <h3>HTML</h3>
+                <p>Structure of Webpages</p>
+            </div>
+            <div class="box">
+                <h3>CSS</h3>
+                <p>Styling of Webpages</p>
+            </div>
+            <div class="box">
+                <h3>JavaScript</h3>
+                <p>Dynamic Webpages</p>
+            </div>
+        </div>
+        <h2>Responsive Units</h2>
+        <div class="unit-box">
+            This box uses percentage width, vw padding
+            and rem font size.
+        </div>
+        <h2>Fluid Sizing</h2>
+        <div class="fluid-box">
+            This box demonstrates min() and max()
+            CSS functions.
+        </div>
+        <footer>
+            <p>Responsive Web Design Demonstration</p>
+        </footer>
+    </div>
+</body>
+</html>
